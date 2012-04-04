@@ -1,0 +1,203 @@
+/* ==========================================================================
+Global styles
+========================================================================== */
+
+div.center {
+  @extend .clearfix;
+  margin: 0 auto;
+  position: relative;
+  width: 1000px;
+}
+
+section#one,
+section#two,
+section#three,
+section#four,
+section#five {
+  @extend .clearfix;
+  background: $tertiary;
+  padding: 122px 0 120px 0; // add extra space to top of section to fit fixed nav
+  margin-top: -98px; // hide extra space under previous section
+  min-height: 400px;
+  width: 100%;
+
+  h1 {
+    margin: 0 0 55px 10px;
+  }
+}
+
+// Add box-shadows to sections in order to show layering
+
+section#introduction,
+section#one,
+section#two,
+section#three,
+section#four,
+section#five,
+footer {
+  @include box-shadow(0 0 12px 3px rgba($black, 0.1));
+  position: relative;
+}
+
+section#introduction { z-index: 100; }
+section#one { z-index: 90; }
+section#two { z-index: 80; }
+section#three { z-index: 70; }
+section#four { z-index: 60; }
+section#five { z-index: 50; }
+footer { z-index: 100; }
+
+// Ugly device hacks
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  body {
+    min-width: 1100px; // ugly hack to fix background scaling on iPad
+  }
+}
+
+@media only screen and (max-device-width: 600px) {
+  body {
+    min-width: 1100px; // similarly ugly hack for iPhone/mobile devices
+  }
+}
+
+
+
+/* ==========================================================================
+Nav styles
+========================================================================== */
+
+nav {
+  @extend .clearfix;
+  background: $primary;
+  height: 68px;
+  padding-top: 30px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 200; // keep above all other elements
+
+  h1 a {
+    color: $white;
+    float: left;
+    font-size: 48px;
+    margin: 0 0 11px 10px;
+    text-decoration: none;
+
+    &:hover {
+      color: $white;
+    }
+  }
+
+  ul {
+    @extend .clearfix;
+    float: right;
+    list-style-type: none;
+    margin: 29px 10px 0 0;
+    padding: 0;
+
+    li {
+      float: left;
+      font-size: 14px;
+      margin-left: 20px;
+      @include transition(all 0.2s linear);
+
+      &.current {
+        border-bottom: 3px solid $white; // fix for < IE9
+        border-bottom: 3px solid rgba($white, 0.4);
+      }
+
+      &:hover {
+        border-bottom: 3px solid $white; // fix for < IE9
+        border-bottom: 3px solid rgba($white, 0.4);
+      }
+
+      a {
+        color: $white;
+        text-decoration: none;
+
+        &:hover {
+          color: $white;
+        }
+      }
+    }
+  }
+}
+
+
+
+/* ==========================================================================
+Introduction styles
+========================================================================== */
+
+section#introduction {
+  @extend .clearfix;
+  background: $primary;
+  color: $black;
+  padding: 0 0 120px 0;
+  min-height: 600px; // prevent height-setting script from making it too short
+  width: 100%;
+
+  div.center {
+    @extend .clearfix;
+    padding-top: 98px;
+  }
+}
+
+
+/* ==========================================================================
+Section one styles
+========================================================================== */
+
+section#one {
+
+}
+
+
+/* ==========================================================================
+Section two styles
+========================================================================== */
+
+section#two {
+
+}
+
+
+/* ==========================================================================
+Section three styles
+========================================================================== */
+
+section#three {
+
+}
+
+
+/* ==========================================================================
+Section four styles
+========================================================================== */
+
+section#four {
+
+}
+
+
+/* ==========================================================================
+Section five styles
+========================================================================== */
+
+section#five {
+
+}
+
+
+/* ==========================================================================
+Footer styles
+========================================================================== */
+
+footer {
+  background: $primary;
+  color: $white;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+}

@@ -1,0 +1,43 @@
+// Mixins ======================================================== //
+
+// Opacity, extend to IE
+@mixin opacity ($value) {
+  opacity: $value;
+  -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=($value * 100))"; // IE8
+  filter: alpha(opacity=($value * 100)); // IE5-7
+  zoom: 1; // hacks IE requirement that element be positioned
+}
+
+// Hide from screenreaders and browsers
+@mixin hidden {
+  display: none !important;
+  visibility: hidden;
+}
+
+// Hide only visually, but have it available for screenreaders
+@mixin visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+// User select
+@mixin user-select($select) {
+  -webkit-user-select: $select;
+     -moz-user-select: $select;
+      -ms-user-select: $select;
+       -o-user-select: $select;
+          user-select: $select;
+}
+
+// Resizeable
+@mixin resizable($direction) {
+  // Options: horizontal, vertical, both
+  resize: $direction;
+  overflow: auto; // Safari fix
+}
