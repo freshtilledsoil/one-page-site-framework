@@ -245,7 +245,7 @@ pre {
 code {
   padding: 3px 4px;
   color: #9d261d;
-  background-color: #f5f5f5;
+  background-color: whitesmoke;
   border: 1px solid #999999; }
 
 pre {
@@ -254,7 +254,7 @@ pre {
   margin: 0 0 9px;
   font-size: 12px;
   line-height: 18px;
-  background-color: #f5f5f5;
+  background-color: whitesmoke;
   border: 1px solid #999999;
   border: 1px solid rgba(0, 0, 0, 0.15);
   -webkit-border-radius: 4px;
@@ -388,8 +388,6 @@ input[type="file"] {
   background-color: initial;
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
-  -ms-box-shadow: none;
-  -o-box-shadow: none;
   box-shadow: none; }
 
 input[type="button"],
@@ -419,8 +417,6 @@ select[size] {
 input[type="image"] {
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
-  -ms-box-shadow: none;
-  -o-box-shadow: none;
   box-shadow: none; }
 
 textarea {
@@ -433,8 +429,6 @@ input,
 textarea {
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-  -ms-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-  -o-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   -webkit-transition-property: border, linear, 0.2s;
   -moz-transition-property: border, linear, 0.2s;
@@ -462,8 +456,6 @@ textarea:focus {
   border-color: rgba(4, 156, 219, 0.8);
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(4, 156, 219, 0.6);
   -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(4, 156, 219, 0.6);
-  -ms-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(4, 156, 219, 0.6);
-  -o-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(4, 156, 219, 0.6);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(4, 156, 219, 0.6);
   outline: 0;
   outline: thin dotted \9;
@@ -475,8 +467,6 @@ input[type="checkbox"]:focus,
 select:focus {
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
-  -ms-box-shadow: none;
-  -o-box-shadow: none;
   box-shadow: none;
   outline: thin dotted #333;
   outline: 5px auto -webkit-focus-ring-color;
@@ -488,7 +478,7 @@ textarea[disabled],
 input[readonly],
 select[readonly],
 textarea[readonly] {
-  background-color: #f5f5f5;
+  background-color: whitesmoke;
   border-color: #eeeeee;
   cursor: not-allowed; }
 
@@ -503,8 +493,6 @@ select:focus:required:invalid {
     border-color: #9d261d;
     -webkit-box-shadow: 0 0 6px #f4c8c5;
     -moz-box-shadow: 0 0 6px #f4c8c5;
-    -ms-box-shadow: 0 0 6px #f4c8c5;
-    -o-box-shadow: 0 0 6px #f4c8c5;
     box-shadow: 0 0 6px #f4c8c5; }
 
 /* ==========================================================================
@@ -589,7 +577,7 @@ table {
 
 .table-striped tbody tr:nth-child(odd) td,
 .table-striped tbody tr:nth-child(odd) th {
-  background-color: #f5f5f5; }
+  background-color: whitesmoke; }
 
 .table tbody tr:hover td,
 .table tbody tr:hover th {
@@ -598,61 +586,59 @@ table {
 /* ==========================================================================
 Global styles
 ========================================================================== */
-div.center {
+.center {
   margin: 0 auto;
   position: relative;
   width: 1000px; }
 
-section#one,
-section#two,
-section#three,
-section#four,
-section#five {
+#one,
+#two,
+#three,
+#four,
+#five {
   background: #fef4e6;
   padding: 122px 0 120px 0;
   margin-top: -98px;
   min-height: 400px;
   width: 100%; }
-  section#one h1,
-  section#two h1,
-  section#three h1,
-  section#four h1,
-  section#five h1 {
+  #one h1,
+  #two h1,
+  #three h1,
+  #four h1,
+  #five h1 {
     margin: 0 0 55px 10px; }
 
-section#introduction,
-section#one,
-section#two,
-section#three,
-section#four,
-section#five,
-footer {
+#introduction,
+#one,
+#two,
+#three,
+#four,
+#five,
+[role="contentinfo"] {
   -webkit-box-shadow: 0 0 12px 3px rgba(0, 0, 0, 0.1);
   -moz-box-shadow: 0 0 12px 3px rgba(0, 0, 0, 0.1);
-  -ms-box-shadow: 0 0 12px 3px rgba(0, 0, 0, 0.1);
-  -o-box-shadow: 0 0 12px 3px rgba(0, 0, 0, 0.1);
   box-shadow: 0 0 12px 3px rgba(0, 0, 0, 0.1);
   position: relative; }
 
-section#introduction {
+#introduction {
   z-index: 100; }
 
-section#one {
+#one {
   z-index: 90; }
 
-section#two {
+#two {
   z-index: 80; }
 
-section#three {
+#three {
   z-index: 70; }
 
-section#four {
+#four {
   z-index: 60; }
 
-section#five {
+#five {
   z-index: 50; }
 
-footer {
+[role="contentinfo"] {
   z-index: 100; }
 
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
@@ -664,7 +650,7 @@ footer {
 /* ==========================================================================
 Nav styles
 ========================================================================== */
-nav {
+[role="navigation"] {
   background: #049cdb;
   height: 68px;
   padding-top: 30px;
@@ -672,20 +658,20 @@ nav {
   top: 0;
   width: 100%;
   z-index: 200; }
-  nav h1 a {
+  [role="navigation"] h1 a {
     color: white;
     float: left;
     font-size: 48px;
     margin: 0 0 11px 10px;
     text-decoration: none; }
-    nav h1 a:hover {
+    [role="navigation"] h1 a:hover {
       color: white; }
-  nav ul {
+  [role="navigation"] ul {
     float: right;
     list-style-type: none;
     margin: 29px 10px 0 0;
     padding: 0; }
-    nav ul li {
+    [role="navigation"] ul li {
       float: left;
       font-size: 14px;
       margin-left: 20px;
@@ -709,28 +695,28 @@ nav {
       -ms-transition-delay: 0;
       -o-transition-delay: 0;
       transition-delay: 0; }
-      nav ul li.current {
+      [role="navigation"] ul li.current {
         border-bottom: 3px solid white;
         border-bottom: 3px solid rgba(255, 255, 255, 0.4); }
-      nav ul li:hover {
+      [role="navigation"] ul li:hover {
         border-bottom: 3px solid white;
         border-bottom: 3px solid rgba(255, 255, 255, 0.4); }
-      nav ul li a {
+      [role="navigation"] ul li a {
         color: white;
         text-decoration: none; }
-        nav ul li a:hover {
+        [role="navigation"] ul li a:hover {
           color: white; }
 
 /* ==========================================================================
 Introduction styles
 ========================================================================== */
-section#introduction {
+#introduction {
   background: #049cdb;
   color: black;
   padding: 0 0 120px 0;
   min-height: 600px;
   width: 100%; }
-  section#introduction div.center {
+  #introduction .center {
     padding-top: 98px; }
 
 /* ==========================================================================
@@ -751,7 +737,7 @@ Section five styles
 /* ==========================================================================
 Footer styles
 ========================================================================== */
-footer {
+[role="contentinfo"] {
   background: #049cdb;
   color: white;
   height: 60px;

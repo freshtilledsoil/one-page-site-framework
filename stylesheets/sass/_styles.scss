@@ -2,18 +2,18 @@
 Global styles
 ========================================================================== */
 
-div.center {
+.center {
   @extend .clearfix;
   margin: 0 auto;
   position: relative;
   width: 1000px;
 }
 
-section#one,
-section#two,
-section#three,
-section#four,
-section#five {
+#one,
+#two,
+#three,
+#four,
+#five {
   @extend .clearfix;
   background: $tertiary;
   padding: 122px 0 120px 0; // add extra space to top of section to fit fixed nav
@@ -28,24 +28,24 @@ section#five {
 
 // Add box-shadows to sections in order to show layering
 
-section#introduction,
-section#one,
-section#two,
-section#three,
-section#four,
-section#five,
-footer {
+#introduction,
+#one,
+#two,
+#three,
+#four,
+#five,
+[role="contentinfo"] {
   @include box-shadow(0 0 12px 3px rgba($black, 0.1));
   position: relative;
 }
 
-section#introduction { z-index: 100; }
-section#one { z-index: 90; }
-section#two { z-index: 80; }
-section#three { z-index: 70; }
-section#four { z-index: 60; }
-section#five { z-index: 50; }
-footer { z-index: 100; }
+#introduction { z-index: 100; }
+#one { z-index: 90; }
+#two { z-index: 80; }
+#three { z-index: 70; }
+#four { z-index: 60; }
+#five { z-index: 50; }
+[role="contentinfo"] { z-index: 100; }
 
 // Ugly device hacks
 
@@ -67,7 +67,7 @@ footer { z-index: 100; }
 Nav styles
 ========================================================================== */
 
-nav {
+[role="navigation"] {
   @extend .clearfix;
   background: $primary;
   height: 68px;
@@ -130,7 +130,7 @@ nav {
 Introduction styles
 ========================================================================== */
 
-section#introduction {
+#introduction {
   @extend .clearfix;
   background: $primary;
   color: $black;
@@ -138,7 +138,7 @@ section#introduction {
   min-height: 600px; // prevent height-setting script from making it too short
   width: 100%;
 
-  div.center {
+  .center {
     @extend .clearfix;
     padding-top: 98px;
   }
@@ -149,7 +149,7 @@ section#introduction {
 Section one styles
 ========================================================================== */
 
-section#one {
+#one {
 
 }
 
@@ -158,7 +158,7 @@ section#one {
 Section two styles
 ========================================================================== */
 
-section#two {
+#two {
 
 }
 
@@ -167,7 +167,7 @@ section#two {
 Section three styles
 ========================================================================== */
 
-section#three {
+#three {
 
 }
 
@@ -176,7 +176,7 @@ section#three {
 Section four styles
 ========================================================================== */
 
-section#four {
+#four {
 
 }
 
@@ -185,7 +185,7 @@ section#four {
 Section five styles
 ========================================================================== */
 
-section#five {
+#five {
 
 }
 
@@ -194,7 +194,7 @@ section#five {
 Footer styles
 ========================================================================== */
 
-footer {
+[role="contentinfo"] {
   background: $primary;
   color: $white;
   height: 60px;
